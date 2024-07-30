@@ -30,6 +30,8 @@ Projeto feito em agosto de 2022, de uma <a href="https://haaveeni.github.io/calc
 - [x] Subtrair
 - [x] Multiplicar
 - [x] Dividir
+- [x] Apagar entrada inteira
+- [x] Apagar último dígito
 
 ---
 
