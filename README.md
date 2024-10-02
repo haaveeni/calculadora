@@ -1,21 +1,21 @@
 # <p align="center">🧮 Calculadora ➕➖✖️➗</p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/haaveeni/calculadora?color=%23b21104">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/haaveeni/nlw-pocket-js-iniciante?color=brightgreen">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/haaveeni%2Fcalculadora?color=%23b21104">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/haaveeni%2Fnlw-pocket-js-iniciante?color=brightgreen">
   
-  <a href="https://github.com/haaveeni/calculadora/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/haaveeni/calculadora?color=%23b21104">
+  <a href="https://github.com/haaveeni/nlw-pocket-js-iniciante/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/haaveeni/nlw-pocket-js-iniciante?color=brightgreen">
   </a>
   
    <a href="">
-    <img alt="Feito pela Veridiana Lucena" src="https://img.shields.io/badge/feito%20por%20-Veridiana-b21104">
+    <img alt="Feito pela Veridiana Lucena" src="https://img.shields.io/badge/feito%20por%20-Veridiana-brightgreen">
    </a>
 
 <p align="center">
-	<!-- 	<img alt="Status Em Desenvolvimento" src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green"> -->
-<img alt="Status Concluído" src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-brightgreen">
+	<img alt="Status Entregue" src="https://img.shields.io/badge/STATUS-%20ENTREGUE-brightgreen">
+<!-- 	<img alt="Status Concluído" src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-brightgreen"> -->
 </p>
 
 ## 💻 Sobre o projeto
@@ -62,15 +62,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ git clone git@github.com:haaveeni/calculadora.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd haaveeni/calculadora
+$ cd calculadora
 
-# Instale as dependências
-$ npm i
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev
-
-# O servidor inciará na porta:3333 - acesse http://localhost:3333 
+# Execute o arquivo
+$ index.html
 
 ```
 
@@ -86,9 +81,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ---
 
 ## 👩🏻 Autora
-
-<a href="https://www.linkedin.com/in/veridiana-lucena/">
- <img src="https://media.licdn.com/dms/image/D4D03AQE7TU2xzZdMtQ/profile-displayphoto-shrink_200_200/0/1715875083059?e=1727308800&v=beta&t=IMNulLJ8nfCxPci-BR6WRLSwNtphIVhohpEqlGyt9QI" width="100px;" alt=""/>
- <br />
- <b>Veridiana Lucena de Marchi</b></a>
- <br />
+ <img src="https://media.licdn.com/dms/image/v2/D4D03AQGC9i8Q8qKbgg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726935427851?e=1733356800&v=beta&t=Pdx08MLdiWHzKb7KbmntsHwslsudDY3TazoZ0K2Tzyg" width="100px;" alt=""/><br>
+ <a href="https://www.linkedin.com/in/veridiana-lucena/">Linkedin</a>
+# Veridiana Lucena de Marchi
+### Desenvolvedora Front-End Júnior
+Graduada em Análise e Desenvolvimento de Sistemas, com forte experiência em HTML, CSS, JavaScript, React, Figma.
+Experiência em Metodologias Ágeis: Scrum e Kanban.
+Ferramentas como Jira, Confluence, Slack, Git e GitHub.
