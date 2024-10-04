@@ -38,8 +38,7 @@ Projeto feito em agosto de 2022, de uma <a href="https://haaveeni.github.io/calc
 ## 🎨 Layout
 
 ### Web
-
-<img width="1440" alt="tela-web" src="https://github.com/user-attachments/assets/9bd58523-e867-437b-9d48-f6931dfff06b">
+![](https://i.ibb.co/5MV8Z0k/Screenshot.png)
 
 ---
 
