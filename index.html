@@ -5,66 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Added tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Calculadora</title>
+    <script src="calculator.js"></script>
 </head>
 
-<body>
-    <header>
-        <div>
-            <span>VERIDIANA LUCENA</span>
-        </div>
-        <div class="menu">
-            <nav>
-                <ul class="unorder-menu">
-                    <li><a href="#" class="menu-link">Meu Portfolio</a></li>
-                </ul>
-            </nav>
+<body class="bg-black h-screen hide-scroll selection:bg-yellow-400">
+    <header class="bg-[#111] text-white flex justify-center md:justify-between px-8 items-center h-16 absolute w-screen">
+        <span class="syne text-xl font-semibold text-center">VERIDIANA LUCENA</span>
+        <a href="#" class="inter hidden md:flex text-sm">Meu Portfolio</a>
         </div>
     </header>
-
-    <div class="title">
-        <h1>CALCULADORA</h1>
+    <div class="flex flex-col justify-center items-center min-h-screen py-28 gap-8">
+        <div class="text-white flex justify-center items-center inter text-xl">
+            <h1 class="syne font-bold">CALCULADORA</h1>
+        </div>
+        <div class="bg-[#454647] rounded-xl w-72 md:w-80 lg:w-96">
+            <p id="result" class="h-24 bg-[#454647] rounded-xl flex justify-end items-end text-white inter text-4xl overflow-hidden px-6 py-2">0</p>
+            <table class="w-full flex flex-col">
+                <tr class="flex bg-black w-full justify-evenly">
+                    <td class="w-2/3 bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full h-full bg-[#575859] text-white hover:brightness-110 duration-150" onclick="clean()">AC</button></td>
+                    <td class="w-1/3 bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#575859] text-white hover:brightness-110 duration-150" onclick="back()">←</button></td>
+                    <td class="w-1/3 bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#ff9f09] text-white hover:brightness-110 duration-150" onclick="insert('/')">÷</button></td>
+                </tr>
+                <tr class="flex bg-black w-full justify-evenly">
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('7')">7</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('8')">8</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('9')">9</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#ff9f09] text-white hover:brightness-110 duration-150" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr class="flex bg-black w-full justify-evenly">
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('4')">4</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('5')">5</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('6')">6</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#ff9f09] text-white hover:brightness-110 duration-150" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr class="flex bg-black w-full justify-evenly">
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('1')">1</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('2')">2</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('3')">3</button></td>
+                    <td class="w-full bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#ff9f09] text-white hover:brightness-110 duration-150" onclick="insert('*')">×</button></td>
+                </tr>
+                <tr class="flex bg-black w-full justify-evenly">
+                    <td class="w-2/3 bg-[#454647] rounded-bl-xl"><button class="focus:outline-0 focus:brightness-110 rounded-bl-xl inter text-3xl w-full h-full bg-[#737474] text-white hover:brightness-110 duration-150" id="zero" onclick="insert('0')">0</button></td>
+                    <td class="w-1/3 bg-[#454647]"><button class="focus:outline-0 focus:brightness-110 inter text-3xl w-full aspect-[4/3] bg-[#737474] text-white hover:brightness-110 duration-150" onclick="insert('.')">.</button></td>
+                    <td class="w-1/3 bg-[#454647] rounded-br-xl"><button class="focus:outline-0 focus:brightness-110 rounded-br-xl inter text-3xl w-full aspect-[4/3] bg-[#ff9f09] text-white hover:brightness-110 duration-150" id="equals" onclick="calc()">=</button></td>
+                </tr>
+            </table>
+        </div>
     </div>
-
-    <div class="calculator">
-        <p id="result"></p>
-        <table>
-            <tr>
-                <td><button class="botao" onclick="clean()">AC</button></td>
-                <td><button class="botao" onclick="back()">←</button></td>
-                <td><button class="botao" onclick="insert('/')">÷</button></td>
-                <td><button class="botao" onclick="insert('*')">x</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao" onclick="insert('7')">7</button></td>
-                <td><button class="botao" onclick="insert('8')">8</button></td>
-                <td><button class="botao" onclick="insert('9')">9</button></td>
-                <td><button class="botao" onclick="insert('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao" onclick="insert('4')">4</button></td>
-                <td><button class="botao" onclick="insert('5')">5</button></td>
-                <td><button class="botao" onclick="insert('6')">6</button></td>
-                <td><button class="botao" onclick="insert('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao" onclick="insert('1')">1</button></td>
-                <td><button class="botao" onclick="insert('2')">2</button></td>
-                <td><button class="botao" onclick="insert('3')">3</button></td>
-                <td rowspan="2"><button class="botao" id="equals" onclick="calc()">=</button></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button class="botao" id="zero" onclick="insert('0')">0</button></td>
-                <td><button class="botao" onclick="insert('.')">.</button></td>
-            </tr>
-        </table>
-    </div>
-
-    <footer>
-        <p>&copy; Desenvolvido por Veridiana Lucena</p>
+    <footer class="flex justify-center py-4">
+        <p class="text-center text-white inter text-sm">&copy; Desenvolvido por Veridiana Lucena</p>
     </footer>
 
-    <script src="calculator.js"></script>
 
 </body>
 

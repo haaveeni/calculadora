@@ -1,125 +1,21 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: #000;
-    color: white;
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/inter.ttf');
 }
 
-html {
-    font-size: 62.5%;
+@font-face {
+    font-family: 'Syne';
+    src: url('/fonts/syne.ttf');
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+.inter {
+    font-family: 'Inter';
 }
 
-header,
-.title,
-.calculator {
-    margin: 20px;
+.syne {
+    font-family: 'Syne';
 }
 
-footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    color: #333;
-}
-
-header {
-    display: flex;
-    height: 10rem;
-    margin: 0 10.8rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header span {
-    font-size: 3rem;
-}
-
-.unorder-menu {
-    display: flex;
-    list-style: none;
-}
-
-.menu-link {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #c6e518;
-    font-size: 2rem;
-}
-
-.menu-link:hover {
-    color: #C7C7C7;
-}
-
-.background {
-    background-color: #000;
-    height: 100vh;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 20px;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-}
-
-.calculator {
-    position: absolute;
-    background-color: gray;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding: 15px;
-    flex: 1;
-}
-
-#result {
-    background-color: #ffffff;
-    width: 210px;
-    height: 30px;
-    margin: 5px;
-    color: #000000;
-    text-align: right;
-    padding: 5px;
-}
-
-.botao:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.botao {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    margin: 3px;
-    background-color: #c6e518;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#equals {
-    height: 106px;
-}
-
-#zero {
-    width: 106px;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
+.hide-scroll::-webkit-scrollbar {
+    display: none;
 }
